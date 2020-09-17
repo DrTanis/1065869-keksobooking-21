@@ -1,7 +1,7 @@
 # Личный проект «Кексобукинг» [![Build status][travis-image]][travis-url]
 
 * Студент: [Сергей Карпов](https://up.htmlacademy.ru/javascript/21/user/1065869).
-* Наставник: `Неизвестно`.
+* Наставник: `Виталий Усик`.
 
 ---
 
