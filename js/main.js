@@ -22,8 +22,8 @@ const LOCATIONS = {
 };
 const arrayOfPosts = [];
 
-let mapPinTemplate = document.querySelector(`#pin`).content.querySelector(`.map__pin`);
-let mapPinElementList = document.querySelector(`.map__pins`);
+const mapPinTemplate = document.querySelector(`#pin`).content.querySelector(`.map__pin`);
+const mapPinElementList = document.querySelector(`.map__pins`);
 const mapElement = document.querySelector(`.map`);
 
 const showMap = function () {
