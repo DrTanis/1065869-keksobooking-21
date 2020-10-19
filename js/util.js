@@ -1,4 +1,3 @@
-/* eslint-disable object-shorthand */
 "use strict";
 
 (function () {

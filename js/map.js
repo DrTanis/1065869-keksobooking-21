@@ -1,4 +1,3 @@
-/* eslint-disable object-shorthand */
 "use strict";
 
 (function () {
@@ -10,21 +9,21 @@
 
   const enableMap = function () {
     if (mapElement.classList.contains(`map--faded`)) {
-      window.form.enableFormElements(formFilterFieldsetElements);
-      window.form.enableFormElements(formFilterSelectElements);
-      mapPinElementList.appendChild(window.posts.createPosts(window.posts.createPostsArray()));
+      window.form.enableElements(formFilterFieldsetElements);
+      window.form.enableElements(formFilterSelectElements);
+      mapPinElementList.appendChild(window.posts.create(window.posts.createArray()));
       mapElement.classList.remove(`map--faded`);
     }
   };
 
   const disableMap = function () {
-    window.form.disableFormElements(formFilterFieldsetElements);
-    window.form.disableFormElements(formFilterSelectElements);
+    window.form.disableElements(formFilterFieldsetElements);
+    window.form.disableElements(formFilterSelectElements);
     mapElement.classList.add(`map--faded`);
   };
 
   window.map = {
-    enableMap: enableMap,
-    disableMap: disableMap
+    enable: enableMap,
+    disable: disableMap
   };
 })();

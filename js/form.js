@@ -1,8 +1,7 @@
-/* eslint-disable object-shorthand */
 "use strict";
 
 (function () {
-  const POINTER = 21.6; // высота указателя map__pin--main
+  const MAP_PIN_MAIN_POINTER = 21.6;
   const mapElement = document.querySelector(`.map`);
   const pinMainElement = document.querySelector(`.map__pin--main`);
   const formAddElement = document.querySelector(`.ad-form`);
@@ -14,7 +13,7 @@
   const fillAddressInput = function () {
     const top = pinMainElement.offsetTop;
     const coordX = Math.round(pinMainElement.offsetLeft + pinMainElement.offsetWidth / 2);
-    const coordY = !mapElement.classList.contains(`map--faded`) ? Math.round(top + pinMainElement.offsetHeight + POINTER) : Math.round(top + pinMainElement.offsetHeight / 2);
+    const coordY = !mapElement.classList.contains(`map--faded`) ? Math.round(top + pinMainElement.offsetHeight + MAP_PIN_MAIN_POINTER) : Math.round(top + pinMainElement.offsetHeight / 2);
 
     addressElement.value = coordX + `, ` + coordY;
   };
@@ -76,11 +75,11 @@
   };
 
   window.form = {
-    enableFormElements: enableFormElements,
-    disableFormElements: disableFormElements,
-    fillAddressInput: fillAddressInput,
-    onFormAddSubmit: onFormAddSubmit,
-    enableFormAdd: enableFormAdd,
-    disableFormAdd: disableFormAdd
+    enableElements: enableFormElements,
+    disableElements: disableFormElements,
+    fillAddress: fillAddressInput,
+    onSubmit: onFormAddSubmit,
+    enable: enableFormAdd,
+    disable: disableFormAdd
   };
 })();

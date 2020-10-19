@@ -1,4 +1,3 @@
-/* eslint-disable object-shorthand */
 "use strict";
 
 (function () {
@@ -56,7 +55,7 @@
   };
 
   window.posts = {
-    createPostsArray: createPostsArray,
-    createPosts: createPosts
+    createArray: createPostsArray,
+    create: createPosts
   };
 })();
