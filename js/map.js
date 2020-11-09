@@ -2,16 +2,19 @@
 
 (function () {
   const mapElement = document.querySelector(`.map`);
-  const mapPinElementList = document.querySelector(`.map__pins`);
   const formFilterElement = document.querySelector(`.map__filters`);
   const formFilterSelectElements = formFilterElement.querySelectorAll(`select`);
   const formFilterFieldsetElements = formFilterElement.querySelectorAll(`fieldset`);
+
+  const onLoadSuccess = function (data) {
+    window.posts.create(data);
+  };
 
   const enableMap = function () {
     if (mapElement.classList.contains(`map--faded`)) {
       window.form.enableElements(formFilterFieldsetElements);
       window.form.enableElements(formFilterSelectElements);
-      mapPinElementList.appendChild(window.posts.create(window.posts.createArray()));
+      window.server.download(window.util.showError, onLoadSuccess);
       mapElement.classList.remove(`map--faded`);
     }
   };
